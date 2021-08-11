@@ -21,18 +21,18 @@ def dfs(graph, start_node):
 
 if __name__ == '__main__':
     arr = []
-    # arr = [9, 9, 9, 9, 9, 9, 9,
-    #         9, 2, 1, 2, 1, 2, 9,
-    #         9, 1, 8, 7, 8, 1, 9,
-    #         9, 2, 7, 9, 7, 2, 9,
-    #         9, 1, 8, 7, 8, 1, 9,
-    #         9, 2, 1, 2, 1, 2, 9,
-    #         9, 9, 9, 9, 9, 9, 9]
+    arr = [[9, 9, 9, 9, 9, 9, 9]
+            [9, 2, 1, 2, 1, 2, 9]
+            [9, 1, 8, 7, 8, 1, 9]
+            [9, 2, 7, 9, 7, 2, 9]
+            [9, 1, 8, 7, 8, 1, 9]
+            [9, 2, 1, 2, 1, 2, 9]
+            [9, 9, 9, 9, 9, 9, 9]]
     a_app = arr.append
     num = int(sys.stdin.readline())
-    for ins in range(num):
-        for zzz in map(int,sys.stdin.readline().split()):
-            a_app(zzz)
+    # for ins in range(num):
+    #     for zzz in map(int,sys.stdin.readline().split()):
+    #         a_app(zzz)
     check = dict()
     level = 0
     count = 0
