@@ -10,7 +10,8 @@ def binary(start,end,target):
             if x>mid:
                 answer += (x-mid)
         if answer >= target:
-            start = mid + 1
+            start = mid + 19
+            
         else:
             end = mid -1
     print(end)
@@ -19,5 +20,5 @@ def binary(start,end,target):
 
 namu,target = map(int,sys.stdin.readline().split())
 namu_arr = list(map(int,sys.stdin.readline().split()))
-start_h = max(namu_arr)
+ax(namu_arr)
 binary(1,start_h,target)
