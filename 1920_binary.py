@@ -1,29 +1,32 @@
 import sys
 
-def binary(arr,target):
+def binary(start, end, target):
     global ans
-    if len(arr) < 1:
-        return ans
-    mid = len(arr)//2
+    if abs(end - start) < 1:
+        return
+    
+    mid = (start+end)//2
+    #print(start,mid, end,target)
     #print(arr, arr[mid], target)
     if arr[mid] == target:
         ans = 1
         #print('target done')
-        return ans
+        return
         
     if target < arr[mid]:
-        binary(arr[:mid],target)
+        binary(0, mid,target)
     if target > arr[mid]:
-        binary(arr[mid+1:],target)
+        binary(mid+1, end,target)
 
 
 num1 = int(sys.stdin.readline())
-A=[]
+arr=[]
 for repeat1 in map(int,sys.stdin.readline().split()):
-    A.append(repeat1)
-A.sort()
+    arr.append(repeat1)
+set(arr)
+arr.sort()
 num2 = int(sys.stdin.readline())
 for target in map(int,sys.stdin.readline().split()):
     ans = 0
-    binary(A,target)
+    binary(0, len(arr), target)
     print(ans)
