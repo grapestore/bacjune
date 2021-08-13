@@ -7,7 +7,6 @@ for x in range(home_num):
     location = int(input())
     home_loca.append(location)
 home_loca.sort()
-start = home_loca[0]
 left = 1
 end = home_loca[-1]-home_loca[0]
 result = 0
