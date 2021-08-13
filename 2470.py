@@ -23,4 +23,4 @@ while right - left >0:
         right -= 1
     elif arr[left] + arr[right]<0:
         left += 1
-print(result)
+print(result[0], result[1])
