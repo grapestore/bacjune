@@ -22,4 +22,4 @@ for i in range(num):
         if len(stk)>0:
             print(stk.pop())
         else:
-            print(-1)
+           continue
