@@ -1,20 +1,19 @@
 import sys
 
-# num = int(input())
-# stk = list(map(int,sys.stdin.readline().split()))
-stk = [6,9,5,7,4]
-result = [0]
-prev = stk[0]
-maximum = stk[0]
-for x in stk[1:]:
-    if prev < x:
-        if maximum < x:
-            
-        
-        else:
+if __name__ == "__main__":
 
-    else:
-
-# for k in reversed(result):
-#     j = str(j) + ' ' + str(k)
-# print(j)
+    num = int(sys.stdin.readline())
+    arr = list(map(int,sys.stdin.readline().split()))
+    result = []
+    answer = []
+    for i in range(num):
+        while result:
+            if result[-1][1] > arr[i]:
+                answer.append(result[-1][0])
+                break
+            else:
+                result.pop()
+        if not result:
+            answer.append(0)
+        result.append([i+1, arr[i]])
+    print(' '.join(map(str,answer)))
