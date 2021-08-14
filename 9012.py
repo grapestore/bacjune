@@ -18,7 +18,7 @@ for i in range(num):
                 last.pop()
             else:
                 stable = True
-                print('No')
+                print('NO')
                 break
 
     if stable == False:
