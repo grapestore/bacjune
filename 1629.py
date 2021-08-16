@@ -1,20 +1,15 @@
 import sys
 
-
-def Mul(a, b):
-    # 만약 b가 1이라면 모듈러 연산 결과 반환
-    if b == 1:
-        return a % C
-
-    remain = Mul(a, b // 2)
-
-    if b % 2 == 0:
-        return remain * remain % C
-
+def multiplication(a,n):
+    if n == 1:
+        return a % c
+    remain = multiplication(a,n//2)
+    if n % 2 == 0:
+        return remain * remain % c
     else:
-        return remain * remain * a % C
+        return remain * remain * a % c
 
 
-A, B, C = map(int, sys.stdin.readline().split())
+value, num, c = map(int,sys.stdin.readline().split())
 
-print(Mul(A, B))
+print(multiplication(value,num))
