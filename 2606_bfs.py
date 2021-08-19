@@ -21,3 +21,4 @@ def bfs(start):
     return visited
 
 print(len(bfs(1))-1)
+print(bfs(1))
