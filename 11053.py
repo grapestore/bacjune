@@ -19,5 +19,3 @@ for i in range(num):
                     visited.append(arr[j])
     result.append(len(visited))
 print(max(result))
-
-##### 못품 나중에 재도전######
