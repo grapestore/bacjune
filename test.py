@@ -1,15 +1,10 @@
-import sys
-get_data = sys.stdin.readline().strip()
-print(get_data)
-stack = []
+from collections import defaultdict
 
-def handle_input(s):
-    print(s)
-    if s == '(' or '[':
-        stack.append(s)
+arr = dict()
 
+if 1 in arr:
+    arr[1].append(3)
+else:
+    arr[1] = [3]
 
-for i in get_data:
-    handle_input(i)
-
-print(stack)
+print(arr)
