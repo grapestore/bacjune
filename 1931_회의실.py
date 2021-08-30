@@ -8,7 +8,7 @@ for _ in range(n):
     dif = b - a
     matrix.append([a,b,dif])
 
-matrix.sort(key=lambda x: (x[1],x[2]))
+matrix.sort(key=lambda x: (x[1],x[0]))
 start,end,diff = matrix.pop(0)
 result = []
 result.append([start,end,diff])
