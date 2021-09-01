@@ -23,5 +23,5 @@ def floyd(w):
     return D, P
 
 D,P = floyd(W)
-for x in P:
+for x in D:
     print(x)
