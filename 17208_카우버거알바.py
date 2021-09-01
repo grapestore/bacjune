@@ -9,7 +9,6 @@ for k in range(1,n+1):
     item = list(map(int,sys.stdin.readline().split()))
     for i in range(1,ham+1):
         for j in range(1,pota+1):
-            print(item[0], item[1], k,i,j)
             if i < item[0]:
                 matrix[k][i][j] = matrix[k-1][i][j]
             else:
