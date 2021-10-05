@@ -1,31 +1,32 @@
-import sys
-sys.stdin = open('inputs.text')
 
 
-gems = ["DIA", "RUBY", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE", "DIA"]
-indivi_gem = []
-for count in gems:
-  if count not in indivi_gem:
-    indivi_gem.append(count)
+gems = ["XYZ", "XYZ", "XYZ"]
+indivi_gem = dict()
+temp = set(gems)
+for count in temp:
+  indivi_gem[count] = 0
 length = []
+
 if len(indivi_gem)==1:
   answer = [1,1]
   print(answer)
   exit()
 
-for i in range(len(gems)-len(indivi_gem)+1):
-  dp = []
-  dp.append(gems[i])
-  for j in range(i+1,len(gems)):
-    if gems[j] not in dp:
-      dp.append(gems[j])
-    if len(dp) == len(indivi_gem):
-      temp = j-i
-      length.append([j-i,i+1,j+1])
-      break
-  if temp == len(indivi_gem):
-    break
-    
-length = sorted(length, key=lambda x : (x[0], x[1]))
+count = 0
+start = 0
+end = 0
+diff = 1000001
+for i in gems:
+  end += 1
+  indivi_gem[i] += 1
+
+  if 0 not in indivi_gem.values():
+    while indivi_gem[gems[start]] > 1:
+      indivi_gem[gems[start]] -= 1
+      start+=1
+    if end-start < diff:
+      diff = end-start
+      length = [[diff,start+1,end]]
+
 answer = [length[0][1],length[0][2]]
 print(answer)
