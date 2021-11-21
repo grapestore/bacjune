@@ -2,12 +2,12 @@ import sys
 from collections import deque
 
 data = dict({
-  'temp1':[1,'man1','woman1'],
-  'temp2':[1,'man2','woman2'],
-  'temp3':[1,'man3','woman3'],
-  'temp4':[0,'woman1',"man3"],
-  'temp5':[0,'woman2','man1'],
-  'temp6':[0,'woman3','man2']
+  'user1':[1,'man1','woman1'],
+  'user2':[1,'man2','woman2'],
+  'user3':[1,'man3','woman3'],
+  'user4':[0,'woman1',"man3"],
+  'user5':[0,'woman2','man1'],
+  'user6':[0,'woman3','man2']
 })
 
 man_list = []
