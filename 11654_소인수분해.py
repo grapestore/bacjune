@@ -14,7 +14,7 @@ def eratosthenes(N):
   for i in range(N+1):
     nums[i] = i
 
-  for i in range(2, N//2):
+  for i in range(2, int(N**0.5)+1):
     if nums[i]:
       for j in range(i*i, N+1, i):
         # 앞에 소수가 바꾼건 바꾸지 않겠다 # 
