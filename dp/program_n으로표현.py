@@ -32,7 +32,7 @@ def solution(N, number):
 
 
 
-
+# 최선일때는 존나 빠르지만 최악일땐 존나 최악
 # from collections import deque
 
 # def bfs(target):
