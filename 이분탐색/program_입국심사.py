@@ -2,7 +2,7 @@ def solution(n, times):
     
     left = 1
     right = max(times)*n
-    answer = 1e18
+    answer = right * n
     while left<=right:
         result = [0] * len(times)
         mid = (left+right)//2
