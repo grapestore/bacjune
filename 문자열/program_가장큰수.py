@@ -1,5 +1,7 @@
 from itertools import permutations
 
+## string 숫자인경우 숫자의 순서대로 정렬된다는것을 이용
+
 def solution(numbers):
     answer = ''
     maxi = 0
