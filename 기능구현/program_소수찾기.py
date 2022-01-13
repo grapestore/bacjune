@@ -27,7 +27,7 @@ def solution(numbers):
     import java.util.*;
 
 
-# java 풀이
+# java 풀이 
 # class Solution {
     
 #     HashSet<Integer> result = new HashSet<>();
