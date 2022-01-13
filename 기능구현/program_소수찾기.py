@@ -24,7 +24,7 @@ def solution(numbers):
     return len(set(answer))
 
 
-    import java.util.*;
+#import java.util.*;
 
 
 # java 풀이 
