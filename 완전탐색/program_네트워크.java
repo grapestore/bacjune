@@ -1,7 +1,9 @@
 import java.util.*;
+import java.io.*;
 
-class Solution {
-    
+
+public class Solution {
+
     public void dfs(int[][] matrix, Integer[] visit, int start, int way, int n){
         visit[start] = way;
         for(int i=0; i<n; i++){
@@ -25,5 +27,12 @@ class Solution {
         set.addAll(Arrays.asList(visit));
 
         return set.size();
+    }
+
+
+    public static void main(String[] args) throws Exception {
+        Solution sol = new Solution();
+        int[][] arr = {{1, 1, 0}, {1, 1, 0}, {0, 0, 1}};
+        System.out.println(sol.solution(3, arr));
     }
 }
