@@ -17,3 +17,4 @@ def solution(n, computers):
             dfs(i,visit,n,i)
         
     return len(set(visit))
+
