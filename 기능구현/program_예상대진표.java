@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Solution {
 
-    public int game(int k, int a, int b, int depth){
+    public int game(int k, double a, double b, int depth){
 
         if(depth == k){
             return depth;
@@ -17,19 +17,19 @@ public class Solution {
             return depth;
         }
         else{
-            return game(k,(int) Math.ceil((double)a/2),(int) Math.ceil((double)b/2),depth+1);
+            return game(k,Math.ceil(a/2),Math.ceil(b/2),depth+1);
         }
     }
     public int solution(int n, int a, int b)
     {
         int k = 1;
         while(true){
-            if(n == (int) Math.pow(2,k)){
+            if(n == Math.pow(2,k)){
                 break;
             }
             k += 1;
         }
-        return game(k,a,b,1);
+        return game(k,(double) a,(double) b,1);
 
     }
 
