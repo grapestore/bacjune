@@ -1,3 +1,7 @@
+from heapq import heappush
+import heapq
+
+
 def game(cash, user, sell, cost):
     orzi = cost//10
     rest = cost - cost//10
@@ -10,6 +14,7 @@ def game(cash, user, sell, cost):
     
 
 def solution(enroll, referral, seller, amount):
+    
     user = {
         "minho":[]
     }
