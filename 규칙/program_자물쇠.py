@@ -32,7 +32,7 @@ def solution(key, lock):
     N = len(key)
     M = len(lock)
     rotate(key)
-    new_arr = [[0] * (M*2+N) for _ in range(M*2+N)]
+    new_arr = [[0] * (N*2+M) for _ in range(N*2+M)]
     
     for j in range(M):
         for i in range(M):
@@ -45,5 +45,6 @@ def solution(key, lock):
                     return True
     
     return False
+    
 if __name__ == "__main__":
   print(solution([[0, 0, 0], [1, 0, 0], [0, 1, 1]], [[1, 1, 1], [1, 1, 0], [1, 0, 1]]))
