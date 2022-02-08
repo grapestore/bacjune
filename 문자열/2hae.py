@@ -9,6 +9,7 @@ def solution(orders, course):
                 temp = ''.join(permu)
                 info[temp] += 1
     answer = []
+    
     for idx in course:
         result = []
         for find in info:
